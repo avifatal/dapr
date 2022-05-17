@@ -10,6 +10,6 @@ async function bootstrap() {
   // add this as other post with content-type: json will fail like login will fail due to bodyPaser code above
   app.use(bodyParser.json());
   
-  await app.listen(80);
+  await app.listen(80,'0.0.0.0');
 }
 bootstrap();
