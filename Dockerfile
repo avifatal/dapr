@@ -8,6 +8,6 @@ RUN pnpm run build
 
 FROM node:18
 WORKDIR /usr/src/app
-COPY --from=build ./dist ./
-COPY --from=build ./node_modules ./node_modules
+COPY --from=build /usr/src/app/dist /usr/src/app/
+COPY --from=build /usr/src/app/node_modules /usr/src/app/node_modules
 ENTRYPOINT ["node", "main.js"]
