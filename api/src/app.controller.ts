@@ -16,7 +16,7 @@ export class AppController {
     
     await client.state.save("statestore", [{key: 'test12', value: 'llest'}])
     console.log('here');
-    return await client.state.get("statestore",'test12');
+    //return await client.state.get("statestore",'test12');
     return await client.invoker.invoke("inner","/",HttpMethod.GET);
     //return this.appService.getHello();
   }
